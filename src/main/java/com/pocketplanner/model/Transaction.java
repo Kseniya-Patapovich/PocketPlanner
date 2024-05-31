@@ -22,6 +22,7 @@ public class Transaction {
     @GeneratedValue(generator = "tranSeqGen")
     private Long id;
 
+
     @Column(name = "amount", nullable = false)
     private BigDecimal amount;
 

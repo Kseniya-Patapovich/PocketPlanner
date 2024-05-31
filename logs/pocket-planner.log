@@ -1,0 +1,26 @@
+01-06-2024 00:16:09.321 [main] INFO  c.p.PocketPlannerApplicationTests.logStarting - Starting PocketPlannerApplicationTests using Java 17.0.8 with PID 9928 (started by Ксения in D:\PocketPlanner\PocketPlanner)
+01-06-2024 00:16:09.325 [main] INFO  c.p.PocketPlannerApplicationTests.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+01-06-2024 00:16:10.343 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+01-06-2024 00:16:10.414 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 61 ms. Found 5 JPA repository interfaces.
+01-06-2024 00:16:11.418 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+01-06-2024 00:16:11.505 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.5.2.Final
+01-06-2024 00:16:11.569 [main] INFO  o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+01-06-2024 00:16:12.056 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+01-06-2024 00:16:12.097 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+01-06-2024 00:16:12.337 [main] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3cad24ae
+01-06-2024 00:16:12.341 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+01-06-2024 00:16:13.649 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+01-06-2024 00:16:13.742 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+01-06-2024 00:16:14.006 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+01-06-2024 00:16:16.475 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword - 
+
+Using generated security password: 0e701c69-876e-4577-a91e-54c4c639d066
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+01-06-2024 00:16:16.498 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer.configure - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+01-06-2024 00:16:16.743 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@76b49d0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@223c42b0, org.springframework.security.web.context.SecurityContextHolderFilter@1e23e1ef, org.springframework.security.web.header.HeaderWriterFilter@3c92f2f9, org.springframework.web.filter.CorsFilter@6acedf54, org.springframework.security.web.csrf.CsrfFilter@3095e9c6, org.springframework.security.web.authentication.logout.LogoutFilter@23ac3788, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@f2120d5, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@22726bc7, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@2a0cc666, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@420849f6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@72a4f3f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6bbd645, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@77f43f3e, org.springframework.security.web.access.ExceptionTranslationFilter@930b6f9, org.springframework.security.web.access.intercept.AuthorizationFilter@732f7660]
+01-06-2024 00:16:16.898 [main] INFO  c.p.PocketPlannerApplicationTests.logStarted - Started PocketPlannerApplicationTests in 7.968 seconds (process running for 9.383)
+01-06-2024 00:16:17.659 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+01-06-2024 00:16:17.662 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+01-06-2024 00:16:17.673 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.

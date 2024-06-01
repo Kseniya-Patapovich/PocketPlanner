@@ -23,7 +23,7 @@ public class Transaction {
     private Long id;
 
     @Column(name = "amount", nullable = false)
-    private BigDecimal amount;
+    private Double amount;
 
     @Column(name = "date", nullable = false)
     @Temporal(TemporalType.TIMESTAMP)
@@ -33,7 +33,7 @@ public class Transaction {
     @JoinColumn(name = "account_id", nullable = false)
     private Account account;
 
-    @ManyToOne
+    /*@ManyToOne
     @JoinColumn(name = "category_id")
-    private Category category;
+    private Category category;*/
 }

@@ -2,6 +2,8 @@ package com.pocketplanner.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
@@ -23,10 +25,14 @@ public class Goal {
     private String name;
 
     @Column(name = "target_amount", nullable = false)
-    private BigDecimal targetAmount;
+        private Double targetAmount;
 
     @Column(name = "current_amount", nullable = false)
-    private BigDecimal currentAmount;
+    private Double currentAmount;
+
+    @Column(name = "status")
+    @Enumerated(EnumType.STRING)
+    private Status status = Status.IN_PROCESS;
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)

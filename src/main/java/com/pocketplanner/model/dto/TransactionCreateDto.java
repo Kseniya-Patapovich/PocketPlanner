@@ -7,5 +7,4 @@ import org.springframework.stereotype.Component;
 @Component
 public class TransactionCreateDto {
     private Double amount;
-    private Category category;
 }

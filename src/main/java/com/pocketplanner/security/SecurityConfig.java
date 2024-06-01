@@ -33,11 +33,6 @@ public class SecurityConfig {
     }
 
     @Bean
-    public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
-    }
-
-    @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         return http
                 .csrf(AbstractHttpConfigurer::disable)
@@ -47,26 +42,32 @@ public class SecurityConfig {
                                 .requestMatchers(new AntPathRequestMatcher("/user", "POST")).hasRole("ADMIN")
                                 .requestMatchers(new AntPathRequestMatcher("/user", "PUT")).permitAll()
                                 .requestMatchers(new AntPathRequestMatcher("/user/*", "DELETE")).permitAll()
-                                /*.requestMatchers(new AntPathRequestMatcher("/goal", "GET")).hasRole("ADMIN")
+                                .requestMatchers(new AntPathRequestMatcher("/goal", "GET")).hasRole("ADMIN")
                                 .requestMatchers(new AntPathRequestMatcher("/goal/*", "GET")).permitAll()
                                 .requestMatchers(new AntPathRequestMatcher("/goal/userId/*", "GET")).permitAll()
                                 .requestMatchers(new AntPathRequestMatcher("/goal/*", "POST")).permitAll()
                                 .requestMatchers(new AntPathRequestMatcher("/goal/*", "DELETE")).permitAll()
-                                .requestMatchers(new AntPathRequestMatcher("/goal/update/*", "POST")).permitAll()
-                                .requestMatchers(new AntPathRequestMatcher("/goal/balance/*", "GET")).permitAll()
-                                .requestMatchers(new AntPathRequestMatcher("/goal/targetAmount/*", "GET")).permitAll()
-                                .requestMatchers(new AntPathRequestMatcher("/accounts", "GET")).hasRole("ADMIN")
-                                .requestMatchers(new AntPathRequestMatcher("/accounts/*", "GET")).permitAll()
-                                .requestMatchers(new AntPathRequestMatcher("/accounts/userId/*", "GET")).permitAll()
-                                .requestMatchers(new AntPathRequestMatcher("/accounts/*", "DELETE")).permitAll()
-                                .requestMatchers(new AntPathRequestMatcher("/accounts/*", "POST")).permitAll()
-                                .requestMatchers(new AntPathRequestMatcher("/accounts/deposit/*", "POST")).permitAll()
-                                .requestMatchers(new AntPathRequestMatcher("/accounts/withdraw/*")).permitAll()*/
+                                .requestMatchers(new AntPathRequestMatcher("/goal/*", "PUT")).permitAll()
+                                .requestMatchers(new AntPathRequestMatcher("/transaction", "GET")).hasRole("ADMIN")
+                                .requestMatchers(new AntPathRequestMatcher("/transaction/*", "GET")).permitAll()
+                                .requestMatchers(new AntPathRequestMatcher("/transaction/userId/*")).permitAll()
+                                .requestMatchers(new AntPathRequestMatcher("/transaction/*", "POST")).permitAll()
+                                .requestMatchers(new AntPathRequestMatcher("/transaction/*", "DELETE")).permitAll()
+                                .requestMatchers(new AntPathRequestMatcher("/account", "GET")).hasRole("ADMIN")
+                                .requestMatchers(new AntPathRequestMatcher("/account/*", "GET")).permitAll()
+                                .requestMatchers(new AntPathRequestMatcher("/account/userId/*", "GET")).permitAll()
+                                .requestMatchers(new AntPathRequestMatcher("/account/*", "POST")).permitAll()
+                                .requestMatchers(new AntPathRequestMatcher("/account/*", "DELETE")).permitAll()
                                 .requestMatchers(new AntPathRequestMatcher("/security/registration", "POST")).permitAll()
                                 .requestMatchers(new AntPathRequestMatcher("/security/token", "POST")).permitAll()
                                 .anyRequest().authenticated())
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();
+    }
+
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
     }
 }

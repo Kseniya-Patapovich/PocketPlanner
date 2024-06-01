@@ -3,6 +3,7 @@ package com.pocketplanner.controller;
 import com.pocketplanner.exception.CustomValidException;
 import com.pocketplanner.model.Goal;
 import com.pocketplanner.model.dto.GoalCreateDto;
+import com.pocketplanner.model.dto.TransactionCreateDto;
 import com.pocketplanner.service.GoalService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -63,7 +64,7 @@ public class GoalController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<HttpStatus> updateGoal(@RequestBody Double amount, @PathVariable("id") Long id) {
-        return new ResponseEntity<>(goalService.updateGoal(amount, id) ? HttpStatus.NO_CONTENT : HttpStatus.CONFLICT);
+    public ResponseEntity<HttpStatus> updateGoal(@RequestBody TransactionCreateDto amount, @PathVariable("id") Long id) {
+        return new ResponseEntity<>(goalService.updateGoal(amount.getAmount(), id) ? HttpStatus.NO_CONTENT : HttpStatus.CONFLICT);
     }
 }

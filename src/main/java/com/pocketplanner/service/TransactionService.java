@@ -44,6 +44,9 @@ public class TransactionService {
         }
         transaction.setAmount(transactionCreateDto.getAmount());
         transaction.setAccount(account.get());
+        if (transaction.getAccount().getBalance() < transaction.getAmount()) {
+            return false;
+        }
         account.get().setBalance(account.get().getBalance() - transactionCreateDto.getAmount());
         transaction.setDate(Timestamp.valueOf(LocalDateTime.now()));
         Transaction createdTransaction = transactionRepository.save(transaction);

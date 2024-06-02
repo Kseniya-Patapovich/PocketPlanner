@@ -1,26 +1,257 @@
-01-06-2024 00:16:09.321 [main] INFO  c.p.PocketPlannerApplicationTests.logStarting - Starting PocketPlannerApplicationTests using Java 17.0.8 with PID 9928 (started by ������ in D:\PocketPlanner\PocketPlanner)
-01-06-2024 00:16:09.325 [main] INFO  c.p.PocketPlannerApplicationTests.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
-01-06-2024 00:16:10.343 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-01-06-2024 00:16:10.414 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 61 ms. Found 5 JPA repository interfaces.
-01-06-2024 00:16:11.418 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-01-06-2024 00:16:11.505 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.5.2.Final
-01-06-2024 00:16:11.569 [main] INFO  o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
-01-06-2024 00:16:12.056 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
-01-06-2024 00:16:12.097 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
-01-06-2024 00:16:12.337 [main] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3cad24ae
-01-06-2024 00:16:12.341 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
-01-06-2024 00:16:13.649 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-01-06-2024 00:16:13.742 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
-01-06-2024 00:16:14.006 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-01-06-2024 00:16:16.475 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword - 
+02-06-2024 12:03:36.879 [main] INFO  c.p.repository.UserRepositoryTest.logStarting - Starting UserRepositoryTest using Java 17.0.8 with PID 19612 (started by Ксения in D:\PocketPlanner\PocketPlanner)
+02-06-2024 12:03:36.892 [main] INFO  c.p.repository.UserRepositoryTest.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+02-06-2024 12:03:37.678 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+02-06-2024 12:03:37.821 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 121 ms. Found 5 JPA repository interfaces.
+02-06-2024 12:03:38.482 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+02-06-2024 12:03:38.587 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.5.2.Final
+02-06-2024 12:03:38.644 [main] INFO  o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+02-06-2024 12:03:39.122 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+02-06-2024 12:03:39.160 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+02-06-2024 12:03:39.415 [main] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@656842bc
+02-06-2024 12:03:39.420 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+02-06-2024 12:03:41.042 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+02-06-2024 12:03:41.175 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+02-06-2024 12:03:41.858 [main] INFO  c.p.repository.UserRepositoryTest.logStarted - Started UserRepositoryTest in 5.651 seconds (process running for 8.364)
+02-06-2024 12:03:42.806 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+02-06-2024 12:03:42.809 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+02-06-2024 12:03:42.814 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+02-06-2024 12:10:44.735 [main] INFO  c.p.controller.UserControllerTest.logStarting - Starting UserControllerTest using Java 17.0.8 with PID 13708 (started by Ксения in D:\PocketPlanner\PocketPlanner)
+02-06-2024 12:10:44.739 [main] INFO  c.p.controller.UserControllerTest.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+02-06-2024 12:10:47.392 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword - 
 
-Using generated security password: 0e701c69-876e-4577-a91e-54c4c639d066
+Using generated security password: 07c3161d-13aa-486e-be20-f40af3416f0d
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-01-06-2024 00:16:16.498 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer.configure - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-01-06-2024 00:16:16.743 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@76b49d0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@223c42b0, org.springframework.security.web.context.SecurityContextHolderFilter@1e23e1ef, org.springframework.security.web.header.HeaderWriterFilter@3c92f2f9, org.springframework.web.filter.CorsFilter@6acedf54, org.springframework.security.web.csrf.CsrfFilter@3095e9c6, org.springframework.security.web.authentication.logout.LogoutFilter@23ac3788, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@f2120d5, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@22726bc7, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@2a0cc666, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@420849f6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@72a4f3f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6bbd645, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@77f43f3e, org.springframework.security.web.access.ExceptionTranslationFilter@930b6f9, org.springframework.security.web.access.intercept.AuthorizationFilter@732f7660]
-01-06-2024 00:16:16.898 [main] INFO  c.p.PocketPlannerApplicationTests.logStarted - Started PocketPlannerApplicationTests in 7.968 seconds (process running for 9.383)
-01-06-2024 00:16:17.659 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
-01-06-2024 00:16:17.662 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
-01-06-2024 00:16:17.673 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+02-06-2024 12:10:47.438 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer.configure - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+02-06-2024 12:10:47.587 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@42ff9a77, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2987d0fa, org.springframework.security.web.context.SecurityContextHolderFilter@20dd5870, org.springframework.security.web.header.HeaderWriterFilter@12448de1, org.springframework.web.filter.CorsFilter@13234ac9, org.springframework.security.web.csrf.CsrfFilter@148ab138, org.springframework.security.web.authentication.logout.LogoutFilter@3f0c6b3c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3a2bb026, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@1cc708a7, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@7254838, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@315b5913, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@134d7ffa, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@24405466, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@39374689, org.springframework.security.web.access.ExceptionTranslationFilter@134abd78, org.springframework.security.web.access.intercept.AuthorizationFilter@6cd2cb2]
+02-06-2024 12:10:47.674 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext.log - Initializing Spring TestDispatcherServlet ''
+02-06-2024 12:10:47.675 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean - Initializing Servlet ''
+02-06-2024 12:10:47.678 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean - Completed initialization in 1 ms
+02-06-2024 12:10:47.738 [main] INFO  c.p.controller.UserControllerTest.logStarted - Started UserControllerTest in 3.641 seconds (process running for 5.259)
+02-06-2024 12:12:20.300 [main] INFO  c.p.PocketPlannerApplicationTests.logStarting - Starting PocketPlannerApplicationTests using Java 17.0.8 with PID 21112 (started by Ксения in D:\PocketPlanner\PocketPlanner)
+02-06-2024 12:12:20.302 [main] INFO  c.p.PocketPlannerApplicationTests.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+02-06-2024 12:12:21.508 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+02-06-2024 12:12:21.604 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 86 ms. Found 5 JPA repository interfaces.
+02-06-2024 12:12:22.794 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+02-06-2024 12:12:22.876 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.5.2.Final
+02-06-2024 12:12:22.930 [main] INFO  o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+02-06-2024 12:12:23.410 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+02-06-2024 12:12:23.453 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+02-06-2024 12:12:23.721 [main] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4377ed24
+02-06-2024 12:12:23.724 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+02-06-2024 12:12:25.029 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+02-06-2024 12:12:25.152 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+02-06-2024 12:12:26.631 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+02-06-2024 12:12:26.763 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer.configure - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailService
+02-06-2024 12:12:27.771 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@45accb5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1b32aaca, org.springframework.security.web.context.SecurityContextHolderFilter@73864c16, org.springframework.security.web.header.HeaderWriterFilter@556a5e70, org.springframework.web.filter.CorsFilter@7b5afde5, org.springframework.security.web.authentication.logout.LogoutFilter@47c06b1a, com.pocketplanner.security.filter.JwtFilter@13f358f8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7b3d3d3d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3129792a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5a14a8c1, org.springframework.security.web.session.SessionManagementFilter@4945cd1f, org.springframework.security.web.access.ExceptionTranslationFilter@49976824, org.springframework.security.web.access.intercept.AuthorizationFilter@48ebcce5]
+02-06-2024 12:12:29.011 [main] WARN  o.s.s.c.a.web.builders.WebSecurity.performBuild - You are asking Spring Security to ignore Ant [pattern='/v3/api-docs/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+02-06-2024 12:12:29.011 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Will not secure Ant [pattern='/v3/api-docs/**']
+02-06-2024 12:12:29.012 [main] WARN  o.s.s.c.a.web.builders.WebSecurity.performBuild - You are asking Spring Security to ignore Ant [pattern='/swagger-ui/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+02-06-2024 12:12:29.013 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Will not secure Ant [pattern='/swagger-ui/**']
+02-06-2024 12:12:29.162 [main] INFO  c.p.PocketPlannerApplicationTests.logStarted - Started PocketPlannerApplicationTests in 9.297 seconds (process running for 10.736)
+02-06-2024 12:12:29.820 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+02-06-2024 12:12:29.823 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+02-06-2024 12:12:29.828 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+02-06-2024 12:18:04.357 [main] INFO  c.p.repository.AccountRepositoryTest.logStarting - Starting AccountRepositoryTest using Java 17.0.8 with PID 5348 (started by Ксения in D:\PocketPlanner\PocketPlanner)
+02-06-2024 12:18:04.360 [main] INFO  c.p.repository.AccountRepositoryTest.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+02-06-2024 12:18:04.977 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+02-06-2024 12:18:05.083 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 94 ms. Found 5 JPA repository interfaces.
+02-06-2024 12:18:05.555 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+02-06-2024 12:18:05.645 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.5.2.Final
+02-06-2024 12:18:05.695 [main] INFO  o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+02-06-2024 12:18:06.110 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+02-06-2024 12:18:06.141 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+02-06-2024 12:18:06.370 [main] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@28ee882c
+02-06-2024 12:18:06.372 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+02-06-2024 12:18:07.793 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+02-06-2024 12:18:07.921 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+02-06-2024 12:18:08.508 [main] INFO  c.p.repository.AccountRepositoryTest.logStarted - Started AccountRepositoryTest in 4.688 seconds (process running for 6.091)
+02-06-2024 12:18:09.197 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+02-06-2024 12:18:09.199 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+02-06-2024 12:18:09.204 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+02-06-2024 12:21:01.223 [main] INFO  c.p.repository.AccountRepositoryTest.logStarting - Starting AccountRepositoryTest using Java 17.0.8 with PID 7460 (started by Ксения in D:\PocketPlanner\PocketPlanner)
+02-06-2024 12:21:01.226 [main] INFO  c.p.repository.AccountRepositoryTest.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+02-06-2024 12:21:01.813 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+02-06-2024 12:21:01.918 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 91 ms. Found 5 JPA repository interfaces.
+02-06-2024 12:21:02.474 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+02-06-2024 12:21:02.559 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.5.2.Final
+02-06-2024 12:21:02.619 [main] INFO  o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+02-06-2024 12:21:03.096 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+02-06-2024 12:21:03.137 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+02-06-2024 12:21:03.366 [main] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@28ee882c
+02-06-2024 12:21:03.368 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+02-06-2024 12:21:04.763 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+02-06-2024 12:21:04.891 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+02-06-2024 12:21:05.421 [main] INFO  c.p.repository.AccountRepositoryTest.logStarted - Started AccountRepositoryTest in 4.727 seconds (process running for 6.273)
+02-06-2024 12:21:06.071 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+02-06-2024 12:21:06.073 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+02-06-2024 12:21:06.076 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+02-06-2024 12:22:56.730 [main] INFO  c.p.repository.AccountRepositoryTest.logStarting - Starting AccountRepositoryTest using Java 17.0.8 with PID 11628 (started by Ксения in D:\PocketPlanner\PocketPlanner)
+02-06-2024 12:22:56.733 [main] INFO  c.p.repository.AccountRepositoryTest.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+02-06-2024 12:22:57.252 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+02-06-2024 12:22:57.357 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 95 ms. Found 5 JPA repository interfaces.
+02-06-2024 12:22:57.808 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+02-06-2024 12:22:57.893 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.5.2.Final
+02-06-2024 12:22:57.951 [main] INFO  o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+02-06-2024 12:22:58.348 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+02-06-2024 12:22:58.380 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+02-06-2024 12:22:58.600 [main] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@72a8361b
+02-06-2024 12:22:58.602 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+02-06-2024 12:22:59.935 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+02-06-2024 12:23:00.060 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+02-06-2024 12:23:00.590 [main] INFO  c.p.repository.AccountRepositoryTest.logStarted - Started AccountRepositoryTest in 4.376 seconds (process running for 5.814)
+02-06-2024 12:23:01.198 [main] WARN  o.h.a.i.UnresolvedEntityInsertActions.logCannotResolveNonNullableTransientDependencies - HHH000437: Attempting to save one or more entities that have a non-nullable association with an unsaved transient entity. The unsaved transient entity must be saved in an operation prior to saving these dependent entities.
+	Unsaved transient entity: ([com.pocketplanner.model.User#<null>])
+	Dependent entities: ([[com.pocketplanner.model.Account#2]])
+	Non-nullable association(s): ([com.pocketplanner.model.Account.user])
+02-06-2024 12:23:01.239 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+02-06-2024 12:23:01.240 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+02-06-2024 12:23:01.245 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+02-06-2024 12:30:28.266 [main] INFO  c.p.repository.AccountRepositoryTest.logStarting - Starting AccountRepositoryTest using Java 17.0.8 with PID 8584 (started by Ксения in D:\PocketPlanner\PocketPlanner)
+02-06-2024 12:30:28.269 [main] INFO  c.p.repository.AccountRepositoryTest.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+02-06-2024 12:30:28.839 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+02-06-2024 12:30:28.949 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 98 ms. Found 5 JPA repository interfaces.
+02-06-2024 12:30:29.414 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+02-06-2024 12:30:29.514 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.5.2.Final
+02-06-2024 12:30:29.568 [main] INFO  o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+02-06-2024 12:30:29.991 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+02-06-2024 12:30:30.026 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+02-06-2024 12:30:30.259 [main] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2997ddfc
+02-06-2024 12:30:30.262 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+02-06-2024 12:30:31.723 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+02-06-2024 12:30:31.843 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+02-06-2024 12:30:32.405 [main] INFO  c.p.repository.AccountRepositoryTest.logStarted - Started AccountRepositoryTest in 4.673 seconds (process running for 6.091)
+02-06-2024 12:30:33.003 [main] WARN  o.h.a.i.UnresolvedEntityInsertActions.logCannotResolveNonNullableTransientDependencies - HHH000437: Attempting to save one or more entities that have a non-nullable association with an unsaved transient entity. The unsaved transient entity must be saved in an operation prior to saving these dependent entities.
+	Unsaved transient entity: ([com.pocketplanner.model.User#<null>])
+	Dependent entities: ([[com.pocketplanner.model.Account#3]])
+	Non-nullable association(s): ([com.pocketplanner.model.Account.user])
+02-06-2024 12:30:33.046 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+02-06-2024 12:30:33.048 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+02-06-2024 12:30:33.051 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+02-06-2024 12:33:26.841 [main] INFO  c.p.repository.AccountRepositoryTest.logStarting - Starting AccountRepositoryTest using Java 17.0.8 with PID 16888 (started by Ксения in D:\PocketPlanner\PocketPlanner)
+02-06-2024 12:33:26.848 [main] INFO  c.p.repository.AccountRepositoryTest.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+02-06-2024 12:33:27.415 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+02-06-2024 12:33:27.510 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 82 ms. Found 5 JPA repository interfaces.
+02-06-2024 12:33:27.961 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+02-06-2024 12:33:28.051 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.5.2.Final
+02-06-2024 12:33:28.105 [main] INFO  o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+02-06-2024 12:33:28.528 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+02-06-2024 12:33:28.566 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+02-06-2024 12:33:28.797 [main] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@28ee882c
+02-06-2024 12:33:28.802 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+02-06-2024 12:33:30.124 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+02-06-2024 12:33:30.240 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+02-06-2024 12:33:30.807 [main] INFO  c.p.repository.AccountRepositoryTest.logStarted - Started AccountRepositoryTest in 4.442 seconds (process running for 5.98)
+02-06-2024 12:33:31.419 [main] WARN  o.h.a.i.UnresolvedEntityInsertActions.logCannotResolveNonNullableTransientDependencies - HHH000437: Attempting to save one or more entities that have a non-nullable association with an unsaved transient entity. The unsaved transient entity must be saved in an operation prior to saving these dependent entities.
+	Unsaved transient entity: ([com.pocketplanner.model.User#<null>])
+	Dependent entities: ([[com.pocketplanner.model.Account#4]])
+	Non-nullable association(s): ([com.pocketplanner.model.Account.user])
+02-06-2024 12:33:31.461 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+02-06-2024 12:33:31.464 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+02-06-2024 12:33:31.470 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+02-06-2024 14:19:47.191 [main] INFO  c.p.repository.AccountRepositoryTest.logStarting - Starting AccountRepositoryTest using Java 17.0.8 with PID 21660 (started by Ксения in D:\PocketPlanner\PocketPlanner)
+02-06-2024 14:19:47.197 [main] INFO  c.p.repository.AccountRepositoryTest.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+02-06-2024 14:19:47.789 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+02-06-2024 14:19:47.895 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 93 ms. Found 5 JPA repository interfaces.
+02-06-2024 14:19:48.349 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+02-06-2024 14:19:48.442 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.5.2.Final
+02-06-2024 14:19:48.490 [main] INFO  o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+02-06-2024 14:19:48.940 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+02-06-2024 14:19:48.977 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+02-06-2024 14:19:49.196 [main] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2997ddfc
+02-06-2024 14:19:49.199 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+02-06-2024 14:19:50.578 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+02-06-2024 14:19:50.695 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+02-06-2024 14:19:51.241 [main] INFO  c.p.repository.AccountRepositoryTest.logStarted - Started AccountRepositoryTest in 4.583 seconds (process running for 6.019)
+02-06-2024 14:19:51.866 [main] WARN  o.h.a.i.UnresolvedEntityInsertActions.logCannotResolveNonNullableTransientDependencies - HHH000437: Attempting to save one or more entities that have a non-nullable association with an unsaved transient entity. The unsaved transient entity must be saved in an operation prior to saving these dependent entities.
+	Unsaved transient entity: ([com.pocketplanner.model.User#<null>])
+	Dependent entities: ([[com.pocketplanner.model.Account#5]])
+	Non-nullable association(s): ([com.pocketplanner.model.Account.user])
+02-06-2024 14:19:51.908 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+02-06-2024 14:19:51.912 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+02-06-2024 14:19:51.917 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+02-06-2024 14:21:32.591 [main] INFO  c.p.repository.AccountRepositoryTest.logStarting - Starting AccountRepositoryTest using Java 17.0.8 with PID 16280 (started by Ксения in D:\PocketPlanner\PocketPlanner)
+02-06-2024 14:21:32.594 [main] INFO  c.p.repository.AccountRepositoryTest.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+02-06-2024 14:21:33.214 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+02-06-2024 14:21:33.323 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 97 ms. Found 5 JPA repository interfaces.
+02-06-2024 14:21:33.832 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+02-06-2024 14:21:33.902 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.5.2.Final
+02-06-2024 14:21:33.960 [main] INFO  o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+02-06-2024 14:21:34.461 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+02-06-2024 14:21:34.527 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+02-06-2024 14:21:34.878 [main] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1ee40b5c
+02-06-2024 14:21:34.882 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+02-06-2024 14:21:36.517 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+02-06-2024 14:21:36.652 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+02-06-2024 14:21:37.201 [main] INFO  c.p.repository.AccountRepositoryTest.logStarted - Started AccountRepositoryTest in 5.216 seconds (process running for 7.146)
+02-06-2024 14:21:37.821 [main] WARN  o.h.a.i.UnresolvedEntityInsertActions.logCannotResolveNonNullableTransientDependencies - HHH000437: Attempting to save one or more entities that have a non-nullable association with an unsaved transient entity. The unsaved transient entity must be saved in an operation prior to saving these dependent entities.
+	Unsaved transient entity: ([com.pocketplanner.model.User#<null>])
+	Dependent entities: ([[com.pocketplanner.model.Account#6]])
+	Non-nullable association(s): ([com.pocketplanner.model.Account.user])
+02-06-2024 14:21:37.874 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+02-06-2024 14:21:37.877 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+02-06-2024 14:21:37.882 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+02-06-2024 14:21:45.484 [main] INFO  c.p.repository.AccountRepositoryTest.logStarting - Starting AccountRepositoryTest using Java 17.0.8 with PID 6072 (started by Ксения in D:\PocketPlanner\PocketPlanner)
+02-06-2024 14:21:45.487 [main] INFO  c.p.repository.AccountRepositoryTest.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+02-06-2024 14:21:46.071 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+02-06-2024 14:21:46.176 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 94 ms. Found 5 JPA repository interfaces.
+02-06-2024 14:21:46.784 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+02-06-2024 14:21:46.882 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.5.2.Final
+02-06-2024 14:21:46.952 [main] INFO  o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+02-06-2024 14:21:47.476 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+02-06-2024 14:21:47.514 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+02-06-2024 14:21:47.793 [main] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1291aab5
+02-06-2024 14:21:47.797 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+02-06-2024 14:21:49.328 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+02-06-2024 14:21:49.449 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+02-06-2024 14:21:50.043 [main] INFO  c.p.repository.AccountRepositoryTest.logStarted - Started AccountRepositoryTest in 5.113 seconds (process running for 6.767)
+02-06-2024 14:21:50.681 [main] WARN  o.h.a.i.UnresolvedEntityInsertActions.logCannotResolveNonNullableTransientDependencies - HHH000437: Attempting to save one or more entities that have a non-nullable association with an unsaved transient entity. The unsaved transient entity must be saved in an operation prior to saving these dependent entities.
+	Unsaved transient entity: ([com.pocketplanner.model.User#<null>])
+	Dependent entities: ([[com.pocketplanner.model.Account#7]])
+	Non-nullable association(s): ([com.pocketplanner.model.Account.user])
+02-06-2024 14:21:50.746 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+02-06-2024 14:21:50.750 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+02-06-2024 14:21:50.756 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+02-06-2024 14:22:02.857 [main] INFO  c.p.repository.AccountRepositoryTest.logStarting - Starting AccountRepositoryTest using Java 17.0.8 with PID 17028 (started by Ксения in D:\PocketPlanner\PocketPlanner)
+02-06-2024 14:22:02.860 [main] INFO  c.p.repository.AccountRepositoryTest.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+02-06-2024 14:22:03.435 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+02-06-2024 14:22:03.533 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 87 ms. Found 5 JPA repository interfaces.
+02-06-2024 14:22:04.029 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+02-06-2024 14:22:04.115 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.5.2.Final
+02-06-2024 14:22:04.173 [main] INFO  o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+02-06-2024 14:22:04.619 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+02-06-2024 14:22:04.660 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+02-06-2024 14:22:04.907 [main] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5c448ef
+02-06-2024 14:22:04.910 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+02-06-2024 14:22:06.380 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+02-06-2024 14:22:06.501 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+02-06-2024 14:22:07.058 [main] INFO  c.p.repository.AccountRepositoryTest.logStarted - Started AccountRepositoryTest in 4.745 seconds (process running for 6.365)
+02-06-2024 14:22:16.195 [main] WARN  o.h.a.i.UnresolvedEntityInsertActions.logCannotResolveNonNullableTransientDependencies - HHH000437: Attempting to save one or more entities that have a non-nullable association with an unsaved transient entity. The unsaved transient entity must be saved in an operation prior to saving these dependent entities.
+	Unsaved transient entity: ([com.pocketplanner.model.User#<null>])
+	Dependent entities: ([[com.pocketplanner.model.Account#8]])
+	Non-nullable association(s): ([com.pocketplanner.model.Account.user])
+02-06-2024 14:22:25.484 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+02-06-2024 14:22:25.487 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+02-06-2024 14:22:25.493 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+02-06-2024 14:25:35.046 [main] INFO  c.p.repository.AccountRepositoryTest.logStarting - Starting AccountRepositoryTest using Java 17.0.8 with PID 16192 (started by Ксения in D:\PocketPlanner\PocketPlanner)
+02-06-2024 14:25:35.050 [main] INFO  c.p.repository.AccountRepositoryTest.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+02-06-2024 14:25:35.633 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+02-06-2024 14:25:35.738 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 90 ms. Found 5 JPA repository interfaces.
+02-06-2024 14:25:36.169 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+02-06-2024 14:25:36.255 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.5.2.Final
+02-06-2024 14:25:36.302 [main] INFO  o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+02-06-2024 14:25:36.691 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+02-06-2024 14:25:36.721 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+02-06-2024 14:25:36.931 [main] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@28ee882c
+02-06-2024 14:25:36.934 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+02-06-2024 14:25:38.256 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+02-06-2024 14:25:38.384 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+02-06-2024 14:25:38.945 [main] INFO  c.p.repository.AccountRepositoryTest.logStarted - Started AccountRepositoryTest in 4.418 seconds (process running for 5.88)
+02-06-2024 14:25:39.545 [main] WARN  o.h.a.i.UnresolvedEntityInsertActions.logCannotResolveNonNullableTransientDependencies - HHH000437: Attempting to save one or more entities that have a non-nullable association with an unsaved transient entity. The unsaved transient entity must be saved in an operation prior to saving these dependent entities.
+	Unsaved transient entity: ([com.pocketplanner.model.User#<null>])
+	Dependent entities: ([[com.pocketplanner.model.Account#9]])
+	Non-nullable association(s): ([com.pocketplanner.model.Account.user])
+02-06-2024 14:25:39.592 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+02-06-2024 14:25:39.594 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+02-06-2024 14:25:39.599 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.

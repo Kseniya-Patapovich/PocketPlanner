@@ -3,7 +3,12 @@ package com.pocketplanner.service;
 import com.pocketplanner.model.User;
 import com.pocketplanner.model.dto.UserCreateDto;
 import com.pocketplanner.repository.UserRepository;
+import com.pocketplanner.security.model.Roles;
+import com.pocketplanner.security.model.UserSecurity;
+import com.pocketplanner.security.repository.UserSecurityRepository;
+import com.pocketplanner.security.service.UserSecurityService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.sql.Timestamp;
@@ -14,10 +19,14 @@ import java.util.Optional;
 @Service
 public class UserService {
     private final UserRepository userRepository;
+    private final UserSecurityRepository userSecurityRepository;
+    private final PasswordEncoder passwordEncoder;
 
     @Autowired
-    public UserService(UserRepository userRepository) {
+    public UserService(UserRepository userRepository, UserSecurityRepository userSecurityRepository, PasswordEncoder passwordEncoder) {
         this.userRepository = userRepository;
+        this.userSecurityRepository = userSecurityRepository;
+        this.passwordEncoder = passwordEncoder;
     }
 
     public List<User> getAllUsers() {
@@ -35,6 +44,15 @@ public class UserService {
         user.setCreated(Timestamp.valueOf(LocalDateTime.now()));
         user.setChanged(Timestamp.valueOf(LocalDateTime.now()));
         User createdUser = userRepository.save(user);
+
+        UserSecurity userSecurity = new UserSecurity();
+        userSecurity.setUserPassword(passwordEncoder.encode(userCreateDto.getUserPassword()));
+        userSecurity.setUserLogin(userCreateDto.getUserLogin());
+        userSecurity.setRole(Roles.USER);
+        userSecurity.setIsBlocked(false);
+        userSecurity.setUserId(user.getId());
+        userSecurityRepository.save(userSecurity);
+
         return getUserById(createdUser.getId()).isPresent();
     }
 

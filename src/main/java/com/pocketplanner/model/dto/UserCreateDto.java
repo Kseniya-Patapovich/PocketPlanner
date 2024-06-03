@@ -20,4 +20,7 @@ public class UserCreateDto {
     @NotNull
     @Size(min = 6, max = 15)
     private String userPassword;
+
+    @NotNull
+    private String userLogin;
 }

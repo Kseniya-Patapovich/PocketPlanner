@@ -47,13 +47,6 @@ public class AccountServiceTest {
         verify(accountRepository, times(1)).findAll();
     }
 
-    /*@Test
-    void createTest_Success() {
-        Mockito.when(accountRepository.save(any())).thenReturn(account);
-        accountService.createAccount(3L, new AccountCreateDto());
-        Mockito.verify(accountRepository, Mockito.times(1)).save(any());
-    }*/
-
     @Test
     public void testCreateAccount() {
         AccountCreateDto accountCreateDto = new AccountCreateDto();

@@ -2,6 +2,7 @@ package com.pocketplanner.service;
 
 import com.pocketplanner.model.Goal;
 import com.pocketplanner.model.Status;
+import com.pocketplanner.model.User;
 import com.pocketplanner.model.dto.GoalCreateDto;
 import com.pocketplanner.repository.GoalRepository;
 import com.pocketplanner.repository.UserRepository;
@@ -37,10 +38,14 @@ public class GoalService {
 
     public Boolean createGoal(GoalCreateDto goalCreateDto, Long userId) {
         Goal goal = new Goal();
+        Optional<User> userOptional = userRepository.findById(userId);
+        if (userOptional.isEmpty()){
+            return false;
+        }
+        goal.setUser(userOptional.get());
         goal.setName(goalCreateDto.getName());
         goal.setTargetAmount(goalCreateDto.getTargetAmount());
         goal.setCurrentAmount(0.0);
-        goal.setUser(userRepository.findById(userId).get());
         Goal createdGoal = goalRepository.save(goal);
         return getGoalById(createdGoal.getId()).isPresent();
     }

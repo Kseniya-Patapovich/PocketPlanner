@@ -1,6 +1,7 @@
 package com.pocketplanner.service;
 
 import com.pocketplanner.model.Account;
+import com.pocketplanner.model.User;
 import com.pocketplanner.model.dto.AccountCreateDto;
 import com.pocketplanner.repository.AccountRepository;
 import com.pocketplanner.repository.UserRepository;
@@ -36,9 +37,12 @@ public class AccountService {
 
     public Boolean createAccount(Long userId, AccountCreateDto accountCreateDto) {
         Account account = new Account();
+        Optional<User> user = userRepository.findById(userId);
+        if (user.isPresent()) {
+            account.setUser(user.get());
+        }
         account.setName(accountCreateDto.getName());
         account.setBalance(accountCreateDto.getBalance());
-        account.setUser(userRepository.findById(userId).get());
         Account createdAccount = accountRepository.save(account);
         return getAccountById(createdAccount.getId()).isPresent();
     }

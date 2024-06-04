@@ -3,6 +3,9 @@ package com.pocketplanner.controller;
 import com.pocketplanner.exception.CustomValidException;
 import com.pocketplanner.model.User;
 import com.pocketplanner.model.dto.UserCreateDto;
+import com.pocketplanner.model.dto.UserUpdateAgeDto;
+import com.pocketplanner.model.dto.UserUpdateNameDto;
+import com.pocketplanner.model.dto.UserUpdatePassword;
 import com.pocketplanner.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -52,9 +55,25 @@ public class UserController {
         return new ResponseEntity<>(userService.createUser(userCreateDto) ? HttpStatus.CREATED : HttpStatus.CONFLICT);
     }
 
-    @PutMapping
+    /*@PutMapping
     public ResponseEntity<HttpStatus> updateUser(@RequestBody User user) {
         return new ResponseEntity<>(userService.updateUser(user) ? HttpStatus.NO_CONTENT : HttpStatus.CONFLICT);
+    }*/
+
+    @PutMapping("/name/{id}")
+    public ResponseEntity<HttpStatus> updateUsername(@RequestBody UserUpdateNameDto userUpdateNameDto, @PathVariable("id") Long id) {
+        return new ResponseEntity<>(userService.updateUserName(userUpdateNameDto, id) ? HttpStatus.NO_CONTENT : HttpStatus.CONFLICT);
+    }
+
+
+    @PutMapping("/age/{id}")
+    public ResponseEntity<HttpStatus> updateUserAge(@RequestBody UserUpdateAgeDto userUpdateAgeDto, @PathVariable("id") Long id) {
+        return new ResponseEntity<>(userService.updateUserAge(userUpdateAgeDto, id) ? HttpStatus.NO_CONTENT : HttpStatus.CONFLICT);
+    }
+
+    @PutMapping("/password/{id}")
+    public ResponseEntity<HttpStatus> updatePassword(@RequestBody UserUpdatePassword userUpdatePassword, @PathVariable("id") Long id) {
+        return new ResponseEntity<>(userService.updatePassword(userUpdatePassword, id) ? HttpStatus.NO_CONTENT : HttpStatus.CONFLICT);
     }
 
     @DeleteMapping("/{id}")

@@ -2,6 +2,9 @@ package com.pocketplanner.service;
 
 import com.pocketplanner.model.User;
 import com.pocketplanner.model.dto.UserCreateDto;
+import com.pocketplanner.model.dto.UserUpdateAgeDto;
+import com.pocketplanner.model.dto.UserUpdateNameDto;
+import com.pocketplanner.model.dto.UserUpdatePassword;
 import com.pocketplanner.repository.UserRepository;
 import com.pocketplanner.security.model.Roles;
 import com.pocketplanner.security.model.UserSecurity;
@@ -49,14 +52,13 @@ public class UserService {
         userSecurity.setUserPassword(passwordEncoder.encode(userCreateDto.getUserPassword()));
         userSecurity.setUserLogin(userCreateDto.getUserLogin());
         userSecurity.setRole(Roles.USER);
-        userSecurity.setIsBlocked(false);
         userSecurity.setUserId(user.getId());
         userSecurityRepository.save(userSecurity);
 
         return getUserById(createdUser.getId()).isPresent();
     }
 
-    public Boolean updateUser(User user) {
+    /*public Boolean updateUser(User user) {
         Optional<User> userFromDBOptional = userRepository.findById(user.getId());
         if (userFromDBOptional.isPresent()) {
             User userFromDB = userFromDBOptional.get();
@@ -69,6 +71,47 @@ public class UserService {
             userFromDB.setChanged(Timestamp.valueOf(LocalDateTime.now()));
             User updateUser = userRepository.saveAndFlush(userFromDB);
             return userFromDB.equals(updateUser);
+        }
+        return false;
+    }*/
+
+    public Boolean updateUserName(UserUpdateNameDto userUpdateNameDto, Long userId) {
+        Optional<User> userFromDb = userRepository.findById(userId);
+        if (userFromDb.isPresent()) {
+            User user = userFromDb.get();
+            if (user.getUsername() != null) {
+                user.setUsername(userUpdateNameDto.getName());
+            }
+            user.setChanged(Timestamp.valueOf(LocalDateTime.now()));
+            User updatedUser = userRepository.saveAndFlush(user);
+            return user.equals(updatedUser);
+        }
+        return false;
+    }
+
+    public Boolean updateUserAge(UserUpdateAgeDto userUpdateAgeDto, Long userId) {
+        Optional<User> userOptional = userRepository.findById(userId);
+        if (userOptional.isPresent()) {
+            User user = userOptional.get();
+            if (user.getAge() != null) {
+                user.setAge(userUpdateAgeDto.getAge());
+            }
+            user.setChanged(Timestamp.valueOf(LocalDateTime.now()));
+            User updaredUser = userRepository.saveAndFlush(user);
+            return user.equals(updaredUser);
+        }
+        return false;
+    }
+
+    public Boolean updatePassword(UserUpdatePassword userUpdatePassword, Long userId) {
+        Optional<UserSecurity> userSecurityOptional = userSecurityRepository.findById(userId);
+        if (userSecurityOptional.isPresent()) {
+            UserSecurity userSecurity = userSecurityOptional.get();
+            if (userSecurity.getUserPassword() != null) {
+                userSecurity.setUserPassword(userUpdatePassword.getPassword());
+            }
+            UserSecurity updatedUser = userSecurityRepository.saveAndFlush(userSecurity);
+            return userSecurity.equals(updatedUser);
         }
         return false;
     }

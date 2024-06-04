@@ -44,11 +44,11 @@ public class TransactionService {
         if (account.isEmpty()) {
             return false;
         }
-        transaction.setAmount(transactionCreateDto.getAmount());
-        transaction.setAccount(account.get());
         if (transaction.getAccount().getBalance() < transaction.getAmount()) {
             throw new InsufficientFundsException(account.get().getName());
         }
+        transaction.setAmount(transactionCreateDto.getAmount());
+        transaction.setAccount(account.get());
         if (transactionCreateDto.getAmount() < 0) {
             account.get().setBalance(account.get().getBalance() + transactionCreateDto.getAmount());
             transaction.setCategory(Category.TRANSFER);

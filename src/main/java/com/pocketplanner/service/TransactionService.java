@@ -1,6 +1,8 @@
 package com.pocketplanner.service;
 
+import com.pocketplanner.exception.InsufficientFundsException;
 import com.pocketplanner.model.Account;
+import com.pocketplanner.model.Category;
 import com.pocketplanner.model.Transaction;
 import com.pocketplanner.model.dto.TransactionCreateDto;
 import com.pocketplanner.repository.AccountRepository;
@@ -45,9 +47,15 @@ public class TransactionService {
         transaction.setAmount(transactionCreateDto.getAmount());
         transaction.setAccount(account.get());
         if (transaction.getAccount().getBalance() < transaction.getAmount()) {
-            return false;
+            throw new InsufficientFundsException(account.get().getName());
         }
-        account.get().setBalance(account.get().getBalance() - transactionCreateDto.getAmount());
+        if (transactionCreateDto.getAmount() < 0) {
+            account.get().setBalance(account.get().getBalance() + transactionCreateDto.getAmount());
+            transaction.setCategory(Category.TRANSFER);
+        } else {
+            account.get().setBalance(account.get().getBalance() + transactionCreateDto.getAmount());
+            transaction.setCategory(Category.REPLENISHMENT);
+        }
         transaction.setDate(Timestamp.valueOf(LocalDateTime.now()));
         Transaction createdTransaction = transactionRepository.save(transaction);
         return getTransactionById(createdTransaction.getId()).isPresent();

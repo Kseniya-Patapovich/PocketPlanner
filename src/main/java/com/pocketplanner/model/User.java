@@ -26,11 +26,11 @@ public class User {
     @Column(name = "age", nullable = false)
     private Integer age;
 
-    @Column(name = "created", nullable = false)
+    @Column(name = "created")
     @Temporal(TemporalType.TIMESTAMP)
     private Timestamp created;
 
-    @Column(name = "changed", nullable = false)
+    @Column(name = "changed")
     @Temporal(TemporalType.TIMESTAMP)
     private Timestamp changed;
 }

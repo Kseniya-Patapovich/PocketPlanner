@@ -52,7 +52,7 @@ public class SecurityConfig {
                                 .requestMatchers(new AntPathRequestMatcher("/transaction/*", "GET")).permitAll()
                                 .requestMatchers(new AntPathRequestMatcher("/transaction/userId/*")).permitAll()
                                 .requestMatchers(new AntPathRequestMatcher("/transaction/*", "POST")).permitAll()
-                                .requestMatchers(new AntPathRequestMatcher("/transaction/*", "DELETE")).permitAll()
+                                .requestMatchers(new AntPathRequestMatcher("/transaction/*", "DELETE")).hasRole("ADMIN")
                                 .requestMatchers(new AntPathRequestMatcher("/account", "GET")).hasRole("ADMIN")
                                 .requestMatchers(new AntPathRequestMatcher("/account/*", "GET")).permitAll()
                                 .requestMatchers(new AntPathRequestMatcher("/account/userId/*", "GET")).permitAll()

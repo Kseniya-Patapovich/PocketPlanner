@@ -58,30 +58,11 @@ public class UserService {
         return getUserById(createdUser.getId()).isPresent();
     }
 
-    /*public Boolean updateUser(User user) {
-        Optional<User> userFromDBOptional = userRepository.findById(user.getId());
-        if (userFromDBOptional.isPresent()) {
-            User userFromDB = userFromDBOptional.get();
-            if (userFromDB.getUsername() != null) {
-                userFromDB.setUsername(user.getUsername());
-            }
-            if (userFromDB.getAge() != null) {
-                userFromDB.setAge(user.getAge());
-            }
-            userFromDB.setChanged(Timestamp.valueOf(LocalDateTime.now()));
-            User updateUser = userRepository.saveAndFlush(userFromDB);
-            return userFromDB.equals(updateUser);
-        }
-        return false;
-    }*/
-
     public Boolean updateUserName(UserUpdateNameDto userUpdateNameDto, Long userId) {
         Optional<User> userFromDb = userRepository.findById(userId);
         if (userFromDb.isPresent()) {
             User user = userFromDb.get();
-            if (user.getUsername() != null) {
-                user.setUsername(userUpdateNameDto.getName());
-            }
+            user.setUsername(userUpdateNameDto.getName());
             user.setChanged(Timestamp.valueOf(LocalDateTime.now()));
             User updatedUser = userRepository.saveAndFlush(user);
             return user.equals(updatedUser);
@@ -93,9 +74,7 @@ public class UserService {
         Optional<User> userOptional = userRepository.findById(userId);
         if (userOptional.isPresent()) {
             User user = userOptional.get();
-            if (user.getAge() != null) {
-                user.setAge(userUpdateAgeDto.getAge());
-            }
+            user.setAge(userUpdateAgeDto.getAge());
             user.setChanged(Timestamp.valueOf(LocalDateTime.now()));
             User updaredUser = userRepository.saveAndFlush(user);
             return user.equals(updaredUser);
@@ -107,9 +86,7 @@ public class UserService {
         Optional<UserSecurity> userSecurityOptional = userSecurityRepository.findById(userId);
         if (userSecurityOptional.isPresent()) {
             UserSecurity userSecurity = userSecurityOptional.get();
-            if (userSecurity.getUserPassword() != null) {
-                userSecurity.setUserPassword(userUpdatePassword.getPassword());
-            }
+            userSecurity.setUserPassword(passwordEncoder.encode(userUpdatePassword.getPassword()));
             UserSecurity updatedUser = userSecurityRepository.saveAndFlush(userSecurity);
             return userSecurity.equals(updatedUser);
         }

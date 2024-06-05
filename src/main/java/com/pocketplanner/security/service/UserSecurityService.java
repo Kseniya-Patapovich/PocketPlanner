@@ -48,7 +48,7 @@ public class UserSecurityService {
         userSecurity.setUserPassword(passwordEncoder.encode(registrationDto.getPassword()));
         userSecurity.setUserId(savedUser.getId());
         userSecurity.setRole(Roles.USER);
-        userSecurity.setIsBlocked(false);
+        //userSecurity.setIsBlocked(false);
         userSecurityRepository.save(userSecurity);
     }
 

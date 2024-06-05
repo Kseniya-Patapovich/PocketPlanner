@@ -55,11 +55,6 @@ public class UserController {
         return new ResponseEntity<>(userService.createUser(userCreateDto) ? HttpStatus.CREATED : HttpStatus.CONFLICT);
     }
 
-    /*@PutMapping
-    public ResponseEntity<HttpStatus> updateUser(@RequestBody User user) {
-        return new ResponseEntity<>(userService.updateUser(user) ? HttpStatus.NO_CONTENT : HttpStatus.CONFLICT);
-    }*/
-
     @PutMapping("/name/{id}")
     public ResponseEntity<HttpStatus> updateUsername(@RequestBody UserUpdateNameDto userUpdateNameDto, @PathVariable("id") Long id) {
         return new ResponseEntity<>(userService.updateUserName(userUpdateNameDto, id) ? HttpStatus.NO_CONTENT : HttpStatus.CONFLICT);

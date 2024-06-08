@@ -54,29 +54,4 @@ public class AccountService {
         accountRepository.deleteById(id);
         return getAccountById(id).isEmpty();
     }
-
-    /*public Boolean deposit(Long id, Double amount) {
-        Optional<Account> accountsOptional = accountRepository.findById(id);
-        if (accountsOptional.isPresent()) {
-            Account account = accountsOptional.get();
-            account.setBalance(account.getBalance() + amount);
-            Account updateAccount = accountRepository.saveAndFlush(account);
-            return account.equals(updateAccount);
-        }
-        return false;
-    }
-
-    public Boolean withdraw(Long id, Double amount) {
-        Optional<Account> accountsFromDbOptional = accountRepository.findById(id);
-        if (accountsFromDbOptional.isPresent()) {
-            Account accountFromDb = accountsFromDbOptional.get();
-            if (accountFromDb.getBalance() < amount) {
-                return false;
-            }
-            accountFromDb.setBalance(accountFromDb.getBalance() - amount);
-            Account updateAccount = accountRepository.saveAndFlush(accountFromDb);
-            return accountFromDb.equals(updateAccount);
-        }
-        return false;
-    }*/
 }

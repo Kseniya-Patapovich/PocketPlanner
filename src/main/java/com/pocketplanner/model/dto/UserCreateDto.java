@@ -11,16 +11,13 @@ import org.springframework.stereotype.Component;
 @Component
 public class UserCreateDto {
     @NotNull
-    @Size(min = 6, max = 15)
     private String username;
 
     @NotNull
-    //@Adult
-    @Min(18)
+    @Adult
     private Integer age;
 
     @NotNull
-    @Size(min = 6, max = 15)
     private String userPassword;
 
     @NotNull

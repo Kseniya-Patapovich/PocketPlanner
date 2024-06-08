@@ -1,5 +1,6 @@
 package com.pocketplanner.model;
 
+import com.pocketplanner.annotation.Adult;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

@@ -7,6 +7,7 @@ import com.pocketplanner.model.dto.UserUpdateAgeDto;
 import com.pocketplanner.model.dto.UserUpdateNameDto;
 import com.pocketplanner.model.dto.UserUpdatePassword;
 import com.pocketplanner.service.UserService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -48,7 +49,7 @@ public class UserController {
     }
 
     @PostMapping
-    public ResponseEntity<HttpStatus> createUser(@RequestBody UserCreateDto userCreateDto, BindingResult bindingResult) {
+    public ResponseEntity<HttpStatus> createUser(@RequestBody @Valid UserCreateDto userCreateDto, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             throw new CustomValidException(bindingResult.getAllErrors().toString());
         }

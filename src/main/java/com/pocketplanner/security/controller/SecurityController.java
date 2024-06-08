@@ -4,6 +4,7 @@ import com.pocketplanner.security.model.dto.AuthRequestDto;
 import com.pocketplanner.security.model.dto.AuthResponseDto;
 import com.pocketplanner.security.model.dto.RegistrationDto;
 import com.pocketplanner.security.service.UserSecurityService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,7 +26,7 @@ public class SecurityController {
     }
 
     @PostMapping("/registration")
-    public ResponseEntity<HttpStatus> registration(@RequestBody RegistrationDto registrationDto) {
+    public ResponseEntity<HttpStatus> registration(@RequestBody @Valid RegistrationDto registrationDto) {
         userSecurityService.registration(registrationDto);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }

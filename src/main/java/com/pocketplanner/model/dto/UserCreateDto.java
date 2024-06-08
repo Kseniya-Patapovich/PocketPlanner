@@ -1,6 +1,7 @@
 package com.pocketplanner.model.dto;
 
 import com.pocketplanner.annotation.Adult;
+import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
@@ -14,7 +15,8 @@ public class UserCreateDto {
     private String username;
 
     @NotNull
-    @Adult
+    //@Adult
+    @Min(18)
     private Integer age;
 
     @NotNull

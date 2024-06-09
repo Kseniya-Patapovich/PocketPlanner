@@ -1,9 +1,11 @@
 package com.pocketplanner.service;
 
+import com.pocketplanner.model.Account;
 import com.pocketplanner.model.Goal;
 import com.pocketplanner.model.Status;
 import com.pocketplanner.model.User;
 import com.pocketplanner.model.dto.GoalCreateDto;
+import com.pocketplanner.repository.AccountRepository;
 import com.pocketplanner.repository.GoalRepository;
 import com.pocketplanner.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,11 +18,13 @@ import java.util.Optional;
 public class GoalService {
     private final GoalRepository goalRepository;
     private final UserRepository userRepository;
+    private final AccountRepository accountRepository;
 
     @Autowired
-    public GoalService(GoalRepository goalRepository, UserRepository userRepository) {
+    public GoalService(GoalRepository goalRepository, UserRepository userRepository, AccountRepository accountRepository) {
         this.goalRepository = goalRepository;
         this.userRepository = userRepository;
+        this.accountRepository = accountRepository;
     }
 
     public List<Goal> getAllGoals() {
@@ -38,7 +42,7 @@ public class GoalService {
     public Boolean createGoal(GoalCreateDto goalCreateDto, Long userId) {
         Goal goal = new Goal();
         Optional<User> userOptional = userRepository.findById(userId);
-        if (userOptional.isEmpty()){
+        if (userOptional.isEmpty()) {
             return false;
         }
         goal.setUser(userOptional.get());
@@ -58,15 +62,18 @@ public class GoalService {
         return getGoalById(id).isEmpty();
     }
 
-    public Boolean updateGoal(Double amount, Long id) {
+    public Boolean updateGoal(Double amount, Long id, Long accountId) {
         Optional<Goal> goalOptional = goalRepository.findById(id);
-        if (goalOptional.isPresent()) {
+        Optional<Account> accountOptional = accountRepository.findById(accountId);
+        if (goalOptional.isPresent() && accountOptional.isPresent()) {
             Goal goal = goalOptional.get();
             goal.setTargetAmount(goal.getTargetAmount() - amount);
             goal.setCurrentAmount(goal.getCurrentAmount() + amount);
             if (goal.getTargetAmount() == 0.0) {
                 goal.setStatus(Status.COMPLETED);
             }
+            Account account = accountOptional.get();
+            account.setBalance(account.getBalance() - amount);
             Goal updateGoal = goalRepository.saveAndFlush(goal);
             return goal.equals(updateGoal);
         }

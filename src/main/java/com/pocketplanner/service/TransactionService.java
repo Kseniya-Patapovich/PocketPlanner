@@ -44,7 +44,7 @@ public class TransactionService {
         if (account.isEmpty()) {
             return false;
         }
-        if (transaction.getAccount().getBalance() < transaction.getAmount()) {
+        if (account.get().getBalance() < transactionCreateDto.getAmount()) {
             throw new InsufficientFundsException(account.get().getName());
         }
         transaction.setAmount(transactionCreateDto.getAmount());

@@ -63,8 +63,8 @@ public class GoalController {
         return new ResponseEntity<>(goalService.deleteGoal(id) ? HttpStatus.NO_CONTENT : HttpStatus.CONFLICT);
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<HttpStatus> updateGoal(@RequestBody TransactionCreateDto amount, @PathVariable("id") Long id) {
-        return new ResponseEntity<>(goalService.updateGoal(amount.getAmount(), id) ? HttpStatus.NO_CONTENT : HttpStatus.CONFLICT);
+    @PutMapping("/{id}/{acId}")
+    public ResponseEntity<HttpStatus> updateGoal(@RequestBody TransactionCreateDto amount, @PathVariable("id") Long id, @PathVariable("acId") Long accountId) {
+        return new ResponseEntity<>(goalService.updateGoal(amount.getAmount(), id, accountId) ? HttpStatus.NO_CONTENT : HttpStatus.CONFLICT);
     }
 }

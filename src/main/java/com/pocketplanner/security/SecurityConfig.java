@@ -40,7 +40,6 @@ public class SecurityConfig {
                         auth.requestMatchers(new AntPathRequestMatcher("/user", "GET")).hasRole("ADMIN")
                                 .requestMatchers(new AntPathRequestMatcher("/user/*", "GET")).hasAnyRole("ADMIN", "USER")
                                 .requestMatchers(new AntPathRequestMatcher("/user", "POST")).hasRole("ADMIN")
-                                //.requestMatchers(new AntPathRequestMatcher("/user", "PUT")).permitAll()
                                 .requestMatchers(new AntPathRequestMatcher("/user/name/*", "PUT")).permitAll()
                                 .requestMatchers(new AntPathRequestMatcher("/user/age/*", "PUT")).permitAll()
                                 .requestMatchers(new AntPathRequestMatcher("/user/password/*", "PUT")).permitAll()

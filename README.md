@@ -24,25 +24,20 @@ Available endpoints:
 
 Example: (GET method: <http://localhost:8080/user/1>)
 
-2. <http://localhost:8080/user> - create user. To do this, you need to pass json format:
-{"username":"PKKseniya", "age":20, "userPassword":"kkkkkk", "userLogin":"PKA"}
+2. <http://localhost:8080/user/name/{id}> - change username. To do this, you need to pass json format:
+{"username":"PKKseniya"}
 
-Example: (POST method: <http://localhost:8080/user>) 
+Example: (PUT method: <http://localhost:8080/user/name/1>)
 
-3. <http://localhost:8080/user> - change user. To do this, you need to pass json format:
-{"username":"PKKseniya", "age":20}
-
-Example: (PUT method: <http://localhost:8080/user>)
-
-4. <http://localhost:8080/user/{id}> - delete user
+3. <http://localhost:8080/user/{id}> - delete user
 
 Example: (DELETE method: <http://localhost:8080/user/1>)
 
-5. <http://localhost:8080/goal/{id}> - viewing information about goal by id
+4. <http://localhost:8080/goal/{id}> - viewing information about goal by id
 
 Example: (GET method: <http://localhost:8080/goal/1>)
 
-6. <http://localhost:8080/goal/userId/{id}> - viewing information about all goals by user id
+5. <http://localhost:8080/goal/userId/{id}> - viewing information about all goals by user id
 
 Example: (GET method: <http://localhost:8080/goal/userId/1>)
 
@@ -50,53 +45,63 @@ Example: (GET method: <http://localhost:8080/goal/userId/1>)
 
 Example: (POST method: <http://localhost:8080/goal/1>)
 
-8. <http://localhost:8080/goal/{id}> - delete goal
+7. <http://localhost:8080/goal/{id}> - delete goal
    
 Example: (DELETE method: <http://localhost:8080/goal/1>)
 
-9. <http://localhost:8080/goal/{id}> - change goal. To do this, you need to pass json format: {"amount":1000.0}
+8. <http://localhost:8080/goal/{id}> - change goal. To do this, you need to pass json format: {"amount":1000.0}
 
 Example: (PUT method: <http://localhost:8080/goal/1>)
 
-11. <http://localhost:8080/transaction/{id}> - viewing information about transaction by id
+9. <http://localhost:8080/transaction/{id}> - viewing information about transaction by id
 
 Example: (GET method: <http://localhost:8080/transaction/1>)
 
-12. <http://localhost:8080/transaction/userId/{id}> - viewing information about transaction by user id
+10. <http://localhost:8080/transaction/userId/{id}> - viewing information about transaction by user id
 
 Example: (GET method: <http://localhost:8080/transaction/userId/1>)
 
-13. <http://localhost:8080/transaction/{id}> - create new transaction. To do this, you need to pass json format: {"amount":1000.0}
+11. <http://localhost:8080/transaction/{id}> - create new transaction. To do this, you need to pass json format: {"amount":1000.0}
 
 Example: (POST method: <http://localhost:8080/transaction/1>)
 
-14. <http://localhost:8080/transaction/{id}> - delete transaction
+12. <http://localhost:8080/transaction/{id}> - delete transaction
 
 Example: (DELETE method: <http://localhost:8080/transaction/1>)
 
-15. <http://localhost:8080/account/{id}> - viewing information about user's account
+13. <http://localhost:8080/account/{id}> - viewing information about user's account
 
 Example: (GET method: <http://localhost:8080/account/1>)
 
-16. <http://localhost:8080/account/userId/{id}> - viewing information about all accounts by user id
+14. <http://localhost:8080/account/userId/{id}> - viewing information about all accounts by user id
 
 Example: (GET method: <http://localhost:8080/account/userId/1>)
 
-17. <http://localhost:8080/account/{id}> - create new account by user id. To do this, you need to pass json format: {"name":"27366", "balance":1000.0}
+15. <http://localhost:8080/account/{id}> - create new account by user id. To do this, you need to pass json format: {"name":"27366", "balance":1000.0}
 
 Example: (POST method: <http://localhost:8080/account/1>)
 
-18. <http://localhost:8080/account/{id}> - delete account
+16. <http://localhost:8080/account/{id}> - delete account
 
 Example: (DELETE method: <http://localhost:8080/account/1>)
 
-19. <http://localhost:8080/security/registration> - for registration new user. To do this, you need to pass json format: {"username":"PKKseniya", "age":20, "password":"kkkkkk", "login":"PKA"}
+17. <http://localhost:8080/security/registration> - for registration new user. To do this, you need to pass json format: {"username":"PKKseniya", "age":20, "password":"kkkkkk", "login":"PKA"}
 
 Example: (POST method: <http://localhost:8080/security/registration>)
 
-20. <http://localhost:8080/security/token> - for authentication. "password":"kkkkkk", "login":"PKA"
+18. <http://localhost:8080/security/token> - for authentication. "password":"kkkkkk", "login":"PKA"
 
 Example: (POST method: <http://localhost/security/token>)
+
+19. <http://localhost:8080/user/age/{id}> - change user's age. To do this, you need to pass json format:
+{"age":29}
+
+Example: (PUT method: <http://localhost:8080/user/age/1>)
+
+20. <http://localhost:8080/user/password/{id}> - change user's password. To do this, you need to pass json format:
+{"password":"qwerty1234"}
+
+Example: (PUT method: <http://localhost:8080/user/password/1>)
 
 #### ADMIN
 Available endpoints:
